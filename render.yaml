@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: campanha-ac-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.10
+      - key: DB_URL
+        sync: false       # configurar manualmente no painel do Render (connection string Supabase)
+      - key: JWT_SECRET
+        generateValue: true
+      - key: API_CORS_ORIGINS
+        sync: false       # ex: https://*.streamlit.app

@@ -1,0 +1,24 @@
+[theme]
+# Streamlit usa light por padrão; dark é controlado por CSS em components/theme.py
+# (variáveis CSS + @media prefers-color-scheme), funcionando para os 2 modos.
+base = "light"
+primaryColor = "#003087"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F6FB"
+textColor = "#1F2937"
+linkColor = "#FF6B00"
+font = "sans serif"
+
+[theme.dark]
+base = "dark"
+primaryColor = "#4263EB"
+backgroundColor = "#0F172A"
+secondaryBackgroundColor = "#1E293B"
+textColor = "#E5E7EB"
+linkColor = "#FF8533"
+
+[client]
+showErrorDetails = true
+
+[browser]
+gatherUsageStats = false

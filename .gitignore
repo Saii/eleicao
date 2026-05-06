@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# uv
+.uv/
+uv.lock
+
+# Env / segredos
+.env
+.env.local
+*.pem
+
+# Dados (mantém estrutura, ignora payload)
+data/raw/*
+data/processed/*
+data/geo/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/geo/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Dumps SQL (gerados pelo deploy, não versionar)
+dump_data.sql
+*.dump
+
+# Logs
+*.log
+logs/
+
+# Testes
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
