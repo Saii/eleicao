@@ -4,6 +4,11 @@ Rode: streamlit run dashboard/app.py
 """
 from __future__ import annotations
 
+# bootstrap: insere a raiz do projeto no sys.path para resolver imports `dashboard.*`
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from datetime import datetime, timezone
 
 import pandas as pd
